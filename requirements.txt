@@ -3,3 +3,7 @@ uvicorn
 pydantic
 streamlit
 requests
+streamlit_chat
+streamlit_extras
+hugchat
+pydantic
