@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from chatbot import LlamaIndexChatbot
+from .chatbot import *
 
 app = FastAPI()
 chatbot = LlamaIndexChatbot()
@@ -10,6 +10,10 @@ class ChatRequest(BaseModel):
 
 class ChatResponse(BaseModel):
     bot_response: str
+
+@app.get("/")
+def healthy_check():
+    return {'status': 'healthy'}
 
 @app.post("/chat", response_model=ChatResponse)
 def chat(request: ChatRequest):
