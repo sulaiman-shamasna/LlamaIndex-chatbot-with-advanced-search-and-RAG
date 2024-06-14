@@ -39,13 +39,13 @@ def chat(request: ChatRequest) -> ChatResponse:
     return ChatResponse(bot_response=response)
 
 
-@app.post("/metadata", response_model=DocMetadata)
-def chat(request: ChatRequest) -> DocMetadata:
-    """
-    Chat endpoint to get a metadata of the document(s).
+# @app.post("/metadata", response_model=DocMetadata)
+# def chat(request: ChatRequest) -> DocMetadata:
+#     """
+#     Chat endpoint to get a metadata of the document(s).
 
-    :param request: DocMetadata containing the user input
-    :return: DocMetadata containing the document's metadata
-    """
-    response = chatbot.get_metadata(request.user_input)
-    return DocMetadata(bot_response=response)
+#     :param request: DocMetadata containing the user input
+#     :return: DocMetadata containing the document's metadata
+#     """
+#     response = chatbot.get_metadata(request.user_input)
+#     return DocMetadata(bot_response=response)
