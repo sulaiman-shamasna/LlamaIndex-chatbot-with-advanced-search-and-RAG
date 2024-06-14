@@ -26,9 +26,6 @@ nodes = splitter.get_nodes_from_documents(documents)
 
 
 vector_index = VectorStoreIndex(nodes)
-# query_engine = vector_index.as_query_engine(similarity_top_k=2)
-
-
 
 def vector_query(
     query: str, 
@@ -62,11 +59,6 @@ vector_query_tool = FunctionTool.from_defaults(
 )
 
 llm = OpenAI(model="gpt-3.5-turbo", temperature=0)
-response = llm.predict_and_call(
-    [vector_query_tool], 
-    "What doest the abstract section include in the first page.", 
-    verbose=True
-)
 
 summary_index = SummaryIndex(nodes)
 summary_query_engine = summary_index.as_query_engine(
@@ -80,33 +72,6 @@ summary_tool = QueryEngineTool.from_defaults(
         "Useful if you want to get a summary of the provided document!"
     ),
 )
-
-# Is this the end.
-print('Is this the End?')
-response = llm.predict_and_call(
-    [vector_query_tool, summary_tool], 
-    "List the contributers to this paper written on the first page, please!?", 
-    verbose=True
-)
-
-# # Is this the end.
-# print('Is this the End?')
-# response = llm.predict_and_call(
-#     [vector_query_tool, summary_tool], 
-#     "What's the summary of the results of this article", 
-#     verbose=True
-# )
-
-# Is this the end.
-print('Is this the End?')
-response = llm.predict_and_call(
-    [vector_query_tool, summary_tool], 
-    "Can you please summarize the abstract of the paper.", 
-    verbose=True
-)
-
-print('--------------------: \n', type(response))
-
 
 print('Is this the End?')
 
