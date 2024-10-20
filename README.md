@@ -22,7 +22,7 @@ LlamaIndex-chatbot-with-advanced-search-and-RAG/
     ├── .gitignore
     ├── docs/
     ├── 
-
+```
 
 ## Environment Setup
 
