@@ -1,4 +1,6 @@
 # LlamaIndex-chatbot-with-advanced-search-and-RAG
+
+Please refer to thie [REPOSITORY](https://github.com/sulaiman-shamasna/Advanced-Chatbot-Agentic-RAG-with-LlamaIndex) instead!
 This chatbot utilizes the concept of Agentic RAG to develop an advanced chatbot that is capable of reasoning among complicated-context documents
 
 ## Project Structure
