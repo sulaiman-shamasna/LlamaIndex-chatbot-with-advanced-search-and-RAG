@@ -45,3 +45,7 @@ LlamaIndex-chatbot-with-advanced-search-and-RAG/
 - Logging: Add logging to capture important events and errors.
 - Testing: Write tests for both backend and frontend to ensure reliability.
 - Environment Variables: Use environment variables for configuration (e.g., ports, URLs).
+
+
+### This repo is being refactored locally! A new updated version will replace this one soon.
+---
